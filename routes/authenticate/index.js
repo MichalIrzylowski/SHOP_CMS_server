@@ -2,8 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const register = require("./handlers/register"),
-  login = require("./handlers/login");
+const { register, login } = require("./handlers");
 
 router.post("/register", register);
 router.post("/login", login);

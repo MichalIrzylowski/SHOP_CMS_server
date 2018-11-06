@@ -5,6 +5,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 const auth = require("./routes/authenticate");
+const shopItems = require("./routes/shopItems");
 const errorHandler = require("./handlers/errors");
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 app.use(morgan("tiny"));
 
 app.use("/api/authenticate", auth);
+app.use("/api/shop", shopItems);
 
 const PORT = 8081;
 
